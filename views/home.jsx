@@ -6,6 +6,12 @@ function home () {
     <Def>
         <main>
             <h1>HOME</h1>
+            <div>
+              <img src="/images/burritos.jpg" alt="Taco Bell" />
+              <div>
+                Photo by Me
+              </div>
+            </div>
         </main>
     </Def>
   )
