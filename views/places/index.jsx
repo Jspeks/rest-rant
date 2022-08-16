@@ -1,5 +1,5 @@
 const React = require('react')
-const Def = require('../default')
+const Def = require('./default')
 
 function index (data) {
   let placesFormatted = data.places.map((place) => {
@@ -9,7 +9,7 @@ function index (data) {
         <p className="text-center">
           {place.cuisines}
         </p>
-        <img className="center" width="100%" src={place.pic} alt={place.name}/>
+        <img src={place.pic} alt={place.name} className="center" width="100%" />
         <p className="text-center">
           Located in {place.city}, {place.state}
         </p>
