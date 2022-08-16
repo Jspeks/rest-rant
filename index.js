@@ -3,6 +3,7 @@ const express = require('express')
 const app = express()
 
 // entered this after creating views folder
+app.set('views', __dirname+'/views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 app.use('/places', require('./controllers/places'))
@@ -14,7 +15,9 @@ app.use(express.urlencoded({ extended: true }))
 //     res.send('Hello world!')
 // })
 // above was to display hello world upon start, below is to run a home page
-app.get('/', (req, res) => {
+
+//Create a homepage route.
+app.get('/', function(req, res) {
   res.render('home')
 })
 
